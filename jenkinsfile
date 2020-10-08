@@ -1,9 +1,9 @@
-pipeline {
-stages {
-stage(checkout) {
+Pipeline {
+Stages {
+Stage(checkout) {
   git'https://github.com/KomalR10/jenkins.git'
 }
-stage(build) {
+Stage(build) {
 bat 'mvn clean package'
 withSonarQubeEnv('Sonar') {
     mvn sonar:sonar
