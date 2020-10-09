@@ -1,10 +1,9 @@
 node{
 stage 'checkout' 
   git url: 'https://github.com/KomalR10/jenkins.git'
-
 stage 'build' 
-bat 'mvn clean package'
-withSonarQubeEnv('Sonar') {
-    bat 'mvn sonar:sonar'
+ bat 'mvn clean package'
+ withSonarQubeEnv('Sonar') {
+ bat 'mvn sonar:sonar'
 }
 }
