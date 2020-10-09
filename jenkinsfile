@@ -5,6 +5,6 @@ stage 'checkout'
 stage 'build' 
 bat 'mvn clean package'
 withSonarQubeEnv('Sonar') {
-    bat mvn sonar : sonar
+    bat 'mvn sonar:sonar'
 }
 }
